@@ -10,18 +10,22 @@
     tools:layout_editor_absoluteY="-22dp">
 
     <ImageView
-        android:id="@+id/loginImgLogo"
+        android:id="@+id/startImgLogo"
         android:layout_width="331dp"
         android:layout_height="176dp"
-        app:srcCompat="@drawable/homehub"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="36dp" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homehub" />
 
     <EditText
-        android:id="@+id/loginEtEmail"
+        android:id="@+id/recoverEtEmail"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="271dp"
         android:layout_height="41dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="63dp"
         android:background="#42B8D4"
         android:drawableWidth="24dp"
         android:drawableHeight="24dp"
@@ -31,77 +35,91 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="#000000"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="275dp" />
+        app:layout_constraintStart_toEndOf="@+id/recoverImgEmail"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
 
     <TextView
         android:id="@+id/loginEtForgotPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="monospace"
         android:text="Did you forgot your password?"
         android:textColor="#000000"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerImgPwd" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/registerImgPwd"
         android:layout_width="43dp"
         android:layout_height="42dp"
-        app:srcCompat="@drawable/password"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="343dp" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
+        app:srcCompat="@drawable/password" />
 
     <EditText
-        android:id="@+id/loginEtPassword"
+        android:id="@+id/registerEtPassword"
         android:layout_width="271dp"
         android:layout_height="41dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
         android:background="#42B8D4"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="343dp" />
+        app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
+        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
 
     <ImageView
-        android:id="@+id/loginImgEmail"
+        android:id="@+id/recoverImgEmail"
         android:layout_width="43dp"
         android:layout_height="44dp"
-        app:srcCompat="@drawable/usuario_removebg_preview"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="275dp" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="63dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
+        app:srcCompat="@drawable/usuario_removebg_preview" />
 
     <TextView
         android:id="@+id/loginEtNotAMember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="Not a member? Sign up now!"
         android:textColor="#000000"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="668dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut" />
 
     <Button
-        android:id="@+id/loginBtnLogIn"
+        android:id="@+id/optionsBtnLogOut"
         android:layout_width="329dp"
         android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="#42B8D4"
         android:fontFamily="monospace"
         android:text="LOG IN"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="561dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginCheckRememberDevice" />
 
     <CheckBox
         android:id="@+id/loginCheckRememberDevice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
         android:fontFamily="monospace"
         android:text="Remember this device"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginEtForgotPwd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

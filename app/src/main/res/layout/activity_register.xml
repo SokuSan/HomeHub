@@ -1,6 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#CCE0EE"
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-22dp">
+
+    <EditText
+        android:id="@+id/registerEtRepeatPassword"
+        android:layout_width="271dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="31dp"
+        android:background="#42B8D4"
+        android:ems="10"
+        android:hint="Repeat password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/registerImgRepeatPwd"
+        app:layout_constraintTop_toBottomOf="@+id/registerEtPassword" />
+
+    <ImageView
+        android:id="@+id/registerImgRepeatPwd"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerImgPwd"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/startImgLogo"
+        android:layout_width="331dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homehub" />
+
+    <EditText
+        android:id="@+id/recoverEtEmail"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="271dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="63dp"
+        android:background="#42B8D4"
+        android:drawableWidth="24dp"
+        android:drawableHeight="24dp"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/recoverImgEmail"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
+
+    <ImageView
+        android:id="@+id/registerImgPwd"
+        android:layout_width="43dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
+        app:srcCompat="@drawable/password" />
+
+    <EditText
+        android:id="@+id/registerEtPassword"
+        android:layout_width="271dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
+        android:background="#42B8D4"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
+        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
+
+    <ImageView
+        android:id="@+id/recoverImgEmail"
+        android:layout_width="43dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="63dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
+        app:srcCompat="@drawable/usuario_removebg_preview" />
+
+    <Button
+        android:id="@+id/optionsBtnLogOut"
+        android:layout_width="329dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="71dp"
+        android:backgroundTint="#42B8D4"
+        android:fontFamily="monospace"
+        android:text="REGISTER"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerImgRepeatPwd" />
+
+    <ImageView
+        android:id="@+id/optionsImgBack"
+        android:layout_width="139dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut"
+        app:srcCompat="@drawable/goback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

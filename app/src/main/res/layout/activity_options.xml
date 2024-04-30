@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#CCE0EE"
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-22dp">
+
+    <ImageView
+        android:id="@+id/startImgLogo"
+        android:layout_width="331dp"
+        android:layout_height="176dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homehub" />
+
+    <Button
+        android:id="@+id/optionsBtnLogOut"
+        android:layout_width="341dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="78dp"
+        android:backgroundTint="#42B8D4"
+        android:drawableRight="@drawable/logout"
+        android:fontFamily="monospace"
+        android:text="Log Out"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsSkMusic" />
+
+    <ImageView
+        android:id="@+id/optionsImgBack"
+        android:layout_width="139dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/goback" />
+
+    <SeekBar
+        android:id="@+id/optionsSkEffects"
+        android:layout_width="330dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTvMusic" />
+
+    <SeekBar
+        android:id="@+id/optionsSkMusic"
+        android:layout_width="329dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsTvEffects" />
+
+    <TextView
+        android:id="@+id/optionsTvMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:text="Music"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
+
+    <TextView
+        android:id="@+id/optionsTvEffects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="monospace"
+        android:text="Effects"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionsSkEffects" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
