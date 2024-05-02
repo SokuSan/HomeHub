@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#CCE0EE">
 
+    <Button
+        android:id="@+id/expensesButtonAdd"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#42B8D4"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle" />
+
+    <Button
+        android:id="@+id/expensesButtonSubstract"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#42B8D4"
+        android:fontFamily="monospace"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/expensesButtonAdd"
+        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle" />
+
+    <ImageView
+        android:id="@+id/expensesImgLogo"
+        android:layout_width="187dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homehub" />
+
+    <TextView
+        android:id="@+id/expensesTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="CHORES LIST"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expensesImgLogo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

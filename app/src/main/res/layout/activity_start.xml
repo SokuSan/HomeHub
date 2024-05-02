@@ -14,9 +14,87 @@
         android:layout_width="331dp"
         android:layout_height="176dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub" />
+
+    <ImageView
+        android:id="@+id/startImgOptions"
+        android:layout_width="79dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="316dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/options" />
+
+    <ImageView
+        android:id="@+id/startImgChart"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
+        app:srcCompat="@drawable/chart" />
+
+    <ImageView
+        android:id="@+id/startImgHouse"
+        android:layout_width="131dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="21dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTvExpenses"
+        app:srcCompat="@drawable/house" />
+
+    <TextView
+        android:id="@+id/startTvExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="EXPENSES"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgChart" />
+
+    <ImageView
+        android:id="@+id/startImgShopping"
+        android:layout_width="140dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTvChores"
+        app:srcCompat="@drawable/shopping" />
+
+    <TextView
+        android:id="@+id/startTvShopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:fontFamily="monospace"
+        android:text="SHOPPING"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgShopping" />
+
+    <TextView
+        android:id="@+id/startTvChores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="CHORES"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startImgHouse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
