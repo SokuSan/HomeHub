@@ -6,54 +6,46 @@
     android:layout_height="match_parent"
     android:background="#CCE0EE">
 
-    <Button
-        android:id="@+id/expensesButtonAdd"
-        android:layout_width="141dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#42B8D4"
-        android:fontFamily="monospace"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        android:textStyle="bold"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/choresFloatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="329dp"
+        android:layout_marginTop="479dp"
+        android:clickable="true"
+        app:backgroundTint="#42B8D4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle" />
-
-    <Button
-        android:id="@+id/expensesButtonSubstract"
-        android:layout_width="141dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#42B8D4"
-        android:fontFamily="monospace"
-        android:textColor="#000000"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/expensesButtonAdd"
-        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/choresTvTitle"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <ImageView
-        android:id="@+id/expensesImgLogo"
+        android:id="@+id/choresImgLogo"
         android:layout_width="187dp"
         android:layout_height="84dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="9dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub" />
 
     <TextView
-        android:id="@+id/expensesTvTitle"
+        android:id="@+id/choresTvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="monospace"
         android:text="CHORES LIST"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expensesImgLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/choresImgLogo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/choresRecyclerView"
+        android:layout_width="392dp"
+        android:layout_height="555dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choresTvTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

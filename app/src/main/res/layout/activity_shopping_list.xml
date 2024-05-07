@@ -6,42 +6,55 @@
     android:layout_height="match_parent"
     android:background="#CCE0EE">
 
+    <Button
+        android:id="@+id/shoppingBtnClear"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#42B8D4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shoppingRecyclerView"
+        android:layout_width="373dp"
+        android:layout_height="462dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingBtnAdd" />
+
+    <TextView
+        android:id="@+id/shoppingTvTitle"
+        android:layout_width="377dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp"
+        android:text="SHOPPING LIST"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shoppingImgLogo" />
+
     <ImageView
-        android:id="@+id/expensesImgLogo"
+        android:id="@+id/shoppingImgLogo"
         android:layout_width="187dp"
         android:layout_height="84dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/shoppingFloatingBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="330dp"
-        android:clickable="true"
-        app:backgroundTint="#42B8D4"
+    <Button
+        android:id="@+id/shoppingBtnAdd"
+        android:layout_width="141dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#42B8D4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        tools:layout_editor_absoluteY="638dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/shoppingRecyclerView"
-        android:layout_width="374dp"
-        android:layout_height="529dp"
-        android:layout_marginStart="19dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="174dp" />
-
-    <TextView
-        android:id="@+id/shoppingTvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SHOPPING LIST"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="99dp" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

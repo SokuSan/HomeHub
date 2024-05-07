@@ -56,4 +56,53 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/expensesImgLogo" />
+
+    <TextView
+        android:id="@+id/expensesTvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="monospace"
+        android:text="TOTAL:"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expensesButtonAdd" />
+
+    <TextView
+        android:id="@+id/expensesTvQuantity"
+        android:layout_width="110dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:text="xx"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/expensesTvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/expensesButtonSubstract" />
+
+    <TextView
+        android:id="@+id/expensesTvMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:text="€"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/expensesTvQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/expensesButtonSubstract" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expensesRecyclerView"
+        android:layout_width="377dp"
+        android:layout_height="424dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expensesTvMoney" />
 </androidx.constraintlayout.widget.ConstraintLayout>
