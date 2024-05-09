@@ -17,7 +17,8 @@
         android:layout_marginTop="108dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo6" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
@@ -26,14 +27,15 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="78dp"
         android:backgroundTint="#42B8D4"
-        android:drawableRight="@drawable/logout"
+        android:drawableEnd="@drawable/logout"
         android:fontFamily="monospace"
-        android:text="Log Out"
+        android:text="@string/log_out"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsSkMusic" />
+        app:layout_constraintTop_toBottomOf="@+id/optionsSkMusic"
+        tools:ignore="VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/optionsImgBack"
@@ -43,7 +45,8 @@
         android:layout_marginTop="27dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/goback" />
+        app:srcCompat="@drawable/goback"
+        android:contentDescription="@string/todo5" />
 
     <SeekBar
         android:id="@+id/optionsSkEffects"
@@ -70,7 +73,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
         android:fontFamily="monospace"
-        android:text="Music"
+        android:text="@string/music"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
@@ -82,7 +85,7 @@
         android:layout_marginStart="41dp"
         android:layout_marginTop="25dp"
         android:fontFamily="monospace"
-        android:text="Effects"
+        android:text="@string/effects"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsSkEffects" />

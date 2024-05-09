@@ -17,13 +17,14 @@
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo9" />
 
     <EditText
         android:id="@+id/recoverEtEmail"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="271dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="104dp"
         android:background="#42B8D4"
@@ -32,11 +33,13 @@
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="#000000"
+        android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/recoverImgEmail"
-        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/recoverImgEmail"
@@ -46,7 +49,8 @@
         android:layout_marginTop="104dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
-        app:srcCompat="@drawable/usuario_removebg_preview" />
+        app:srcCompat="@drawable/usuario_removebg_preview"
+        android:contentDescription="@string/todo8" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
@@ -56,12 +60,13 @@
         android:layout_marginTop="97dp"
         android:backgroundTint="#42B8D4"
         android:fontFamily="monospace"
-        android:text="SEND"
+        android:text="@string/send"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recoverTvInsertEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverTvInsertEmail"
+        tools:ignore="TextSizeCheck,VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/optionsImgBack"
@@ -71,7 +76,8 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut"
-        app:srcCompat="@drawable/goback" />
+        app:srcCompat="@drawable/goback"
+        android:contentDescription="@string/todo7" />
 
     <TextView
         android:id="@+id/recoverTvInsertEmail"
@@ -80,8 +86,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="26dp"
         android:fontFamily="monospace"
-        android:text="Insert your email to receive a password recovery email"
+        android:text="@string/insert_your_email_to_receive_a_password_recovery_email"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
+        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

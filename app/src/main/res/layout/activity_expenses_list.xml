@@ -13,12 +13,14 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#42B8D4"
+        android:contentDescription="@string/add"
         android:fontFamily="monospace"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/expensesTvTitle"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/expensesButtonSubstract"
@@ -27,6 +29,7 @@
         android:layout_marginStart="94dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#42B8D4"
+        android:contentDescription="@string/Substrack"
         android:fontFamily="monospace"
         android:textColor="#000000"
         android:textSize="48sp"
@@ -42,7 +45,8 @@
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/expensesTvTitle"
@@ -51,7 +55,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="7dp"
         android:fontFamily="monospace"
-        android:text="EXPENSES LIST"
+        android:text="@string/EXPENSES_LIST"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +68,7 @@
         android:layout_marginStart="19dp"
         android:layout_marginTop="11dp"
         android:fontFamily="monospace"
-        android:text="TOTAL:"
+        android:text="@string/TOTAL"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,12 +81,13 @@
         android:layout_marginStart="114dp"
         android:layout_marginTop="12dp"
         android:fontFamily="monospace"
-        android:text="xx"
+        android:text="@string/xx"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/expensesTvTotal"
-        app:layout_constraintTop_toBottomOf="@+id/expensesButtonSubstract" />
+        app:layout_constraintTop_toBottomOf="@+id/expensesButtonSubstract"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/expensesTvMoney"
@@ -91,7 +96,7 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="12dp"
         android:fontFamily="monospace"
-        android:text="€"
+        android:text="@string/money"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/expensesTvQuantity"

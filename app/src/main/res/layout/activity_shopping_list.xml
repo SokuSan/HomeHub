@@ -13,6 +13,7 @@
         android:layout_marginStart="248dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#42B8D4"
+        android:contentDescription="@string/clear"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
 
@@ -31,12 +32,13 @@
         android:layout_height="63dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="8dp"
-        android:text="SHOPPING LIST"
+        android:text="@string/shopping_list"
         android:textAlignment="center"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shoppingImgLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingImgLogo"
+        tools:ignore="TextSizeCheck" />
 
     <ImageView
         android:id="@+id/shoppingImgLogo"
@@ -46,7 +48,9 @@
         android:layout_marginTop="7dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo16"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/shoppingBtnAdd"
@@ -55,6 +59,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#42B8D4"
+        android:contentDescription="@string/add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
