@@ -12,15 +12,18 @@
     <EditText
         android:id="@+id/registerEtRepeatPassword"
         android:layout_width="271dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="31dp"
         android:background="#42B8D4"
         android:ems="10"
         android:hint="Repeat password"
         android:inputType="textPassword"
+        android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/registerImgRepeatPwd"
-        app:layout_constraintTop_toBottomOf="@+id/registerEtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/registerEtPassword"
+        tools:ignore="HardcodedText"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/registerImgRepeatPwd"
@@ -30,7 +33,8 @@
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerImgPwd"
-        app:srcCompat="@drawable/password" />
+        app:srcCompat="@drawable/password"
+        android:contentDescription="@string/todo12" />
 
     <ImageView
         android:id="@+id/startImgLogo"
@@ -40,24 +44,27 @@
         android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo13" />
 
     <EditText
         android:id="@+id/recoverEtEmail"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="271dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="63dp"
+        android:autofillHints=""
         android:background="#42B8D4"
         android:drawableWidth="24dp"
         android:drawableHeight="24dp"
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="#000000"
+        android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/recoverImgEmail"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
 
@@ -69,20 +76,23 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
-        app:srcCompat="@drawable/password" />
+        app:srcCompat="@drawable/password"
+        android:contentDescription="@string/todo11" />
 
     <EditText
         android:id="@+id/registerEtPassword"
         android:layout_width="271dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="27dp"
         android:background="#42B8D4"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
+        android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
-        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/recoverImgEmail"
@@ -92,7 +102,9 @@
         android:layout_marginTop="63dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
-        app:srcCompat="@drawable/usuario_removebg_preview" />
+        app:srcCompat="@drawable/usuario_removebg_preview"
+        android:contentDescription="@string/todo10"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
@@ -102,12 +114,13 @@
         android:layout_marginTop="71dp"
         android:backgroundTint="#42B8D4"
         android:fontFamily="monospace"
-        android:text="REGISTER"
+        android:text="@string/register"
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerImgRepeatPwd" />
+        app:layout_constraintTop_toBottomOf="@+id/registerImgRepeatPwd"
+        tools:ignore="TextSizeCheck,VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/optionsImgBack"
@@ -117,6 +130,7 @@
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut"
-        app:srcCompat="@drawable/goback" />
+        app:srcCompat="@drawable/goback"
+        android:contentDescription="@string/todo0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

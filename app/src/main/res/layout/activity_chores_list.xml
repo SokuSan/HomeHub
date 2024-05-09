@@ -13,10 +13,13 @@
         android:layout_marginStart="329dp"
         android:layout_marginTop="479dp"
         android:clickable="true"
+        android:contentDescription="@string/todo14"
+        android:focusable="true"
         app:backgroundTint="#42B8D4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choresTvTitle"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add"
+        tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/choresImgLogo"
@@ -26,7 +29,8 @@
         android:layout_marginTop="9dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo15" />
 
     <TextView
         android:id="@+id/choresTvTitle"
@@ -35,7 +39,7 @@
         android:layout_marginStart="46dp"
         android:layout_marginTop="10dp"
         android:fontFamily="monospace"
-        android:text="CHORES LIST"
+        android:text="@string/chores_list"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

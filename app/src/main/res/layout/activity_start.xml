@@ -17,7 +17,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub" />
+        app:srcCompat="@drawable/homehub"
+        android:contentDescription="@string/todo22" />
 
     <ImageView
         android:id="@+id/startImgOptions"
@@ -27,7 +28,8 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/options" />
+        app:srcCompat="@drawable/options"
+        android:contentDescription="@string/todo21" />
 
     <ImageView
         android:id="@+id/startImgChart"
@@ -37,7 +39,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
-        app:srcCompat="@drawable/chart" />
+        app:srcCompat="@drawable/chart"
+        android:contentDescription="@string/todo18" />
 
     <ImageView
         android:id="@+id/startImgHouse"
@@ -47,7 +50,8 @@
         android:layout_marginTop="21dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startTvExpenses"
-        app:srcCompat="@drawable/house" />
+        app:srcCompat="@drawable/house"
+        android:contentDescription="@string/todo19" />
 
     <TextView
         android:id="@+id/startTvExpenses"
@@ -56,7 +60,7 @@
         android:layout_marginStart="124dp"
         android:layout_marginTop="4dp"
         android:fontFamily="monospace"
-        android:text="EXPENSES"
+        android:text="@string/expenses"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +74,8 @@
         android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startTvChores"
-        app:srcCompat="@drawable/shopping" />
+        app:srcCompat="@drawable/shopping"
+        android:contentDescription="@string/todo23" />
 
     <TextView
         android:id="@+id/startTvShopping"
@@ -78,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
         android:fontFamily="monospace"
-        android:text="SHOPPING"
+        android:text="@string/shopping"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +100,7 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startImgHouse" />
+        app:layout_constraintTop_toBottomOf="@+id/startImgHouse"
+        tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
