@@ -26,7 +26,4 @@
     <string name="clear" />
     <string name="shopping">SHOPPING</string>
     <string name="expenses">EXPENSES</string>
-    <string name="todo22">TODO</string>
-    <string name="name">Name</string>
-    <string name="description">Description</string>
 </resources>
