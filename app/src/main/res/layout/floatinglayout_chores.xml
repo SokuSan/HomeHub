@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#42B8D4">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="403dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#FF9800"
+        app:cardBackgroundColor="#00FDE0E0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="413dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/atName"
+                android:layout_width="363dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="21dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="361dp"
+                android:layout_height="223dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="13dp"
+                android:ems="10"
+                android:gravity="top|start"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:maxLines="10"
+                android:minLines="3"
+                android:scrollbars="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/atName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
