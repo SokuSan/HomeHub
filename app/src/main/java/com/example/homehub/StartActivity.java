@@ -13,12 +13,13 @@ import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
 
-    ImageView expensesImg;
-    TextView expensesTv;
-    ImageView choresImg;
-    TextView choresTv;
-    ImageView shoppingImg;
-    TextView shoppingTv;
+    private ImageView expensesImg;
+    private TextView expensesTv;
+    private ImageView choresImg;
+    private TextView choresTv;
+    private ImageView shoppingImg;
+    private TextView shoppingTv;
+    private String page;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +32,48 @@ public class StartActivity extends AppCompatActivity {
         choresTv = findViewById(R.id.startTvChores);
         shoppingImg = findViewById(R.id.startImgShopping);
         shoppingTv = findViewById(R.id.startTvShopping);
+        page = "none";
 
         expensesImg.setOnClickListener(v -> {
-            Intent intentTravel = new Intent(this, ExpensesListActivity.class);
-            //intentTravel.putExtra("dishList", (Serializable) dishList.getDishList());
-
+            page = "expenses";
+            travelIntent(page);
+        });
+        expensesTv.setOnClickListener(v -> {
+            page = "expenses";
+            travelIntent(page);
+        });
+        choresTv.setOnClickListener(v -> {
+            page = "chores";
+            travelIntent(page);
+        });
+        choresImg.setOnClickListener(v -> {
+            page = "chores";
+            travelIntent(page);
+        });
+        shoppingTv.setOnClickListener(v -> {
+            page = "shopping";
+            travelIntent(page);
+        });
+        shoppingImg.setOnClickListener(v -> {
+            page = "shopping";
+            travelIntent(page);
         });
 
+    }
+    public void travelIntent(String page){
+        Intent intent = new Intent (StartActivity.this, StartActivity.class);;
+        switch(page){
+            case "chores" :
+                intent = new Intent (StartActivity.this, ChoresList.class);
+                break;
+            case "shopping" :
+                intent = new Intent (StartActivity.this, ShoppingListActivity.class);
+                break;
+            case "expenses" :
+                intent = new Intent (StartActivity.this, ExpensesListActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 
 
