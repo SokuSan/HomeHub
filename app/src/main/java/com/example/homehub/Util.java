@@ -29,19 +29,4 @@ public class Util {
         }
         return new ShoppingList();
     }
-    /*public static Intent navigation(MenuItem item, AppCompatActivity activity, ChoresList dishList) {
-        int itemId = item.getItemId();
-        Intent intent = null;
-
-        if (itemId == R.id.dishList) {
-            intent = new Intent(activity, ListActivity.class);
-        } else if (itemId == R.id.options) {
-            intent = new Intent(activity, OptionsActivity.class);
-        } else if (itemId == R.id.start) {
-            intent = new Intent(activity, StartActivity.class);
-        }
-        intent.putExtra("dishList", (Serializable) dishList.getDishList());
-
-        return intent;
-    }*/
 }
