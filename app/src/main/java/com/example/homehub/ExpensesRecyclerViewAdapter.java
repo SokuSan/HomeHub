@@ -22,7 +22,7 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
     private ExpensesRecyclerViewAdapter.MyHolder holder;
 
 
-    public ExpensesRecyclerViewAdapter(Context context, List<Shopping> shoppingList) {
+    public ExpensesRecyclerViewAdapter(Context context, List<Expenses> expensesList) {
         this.context = context;
         this.expensesList = expensesList;
     }

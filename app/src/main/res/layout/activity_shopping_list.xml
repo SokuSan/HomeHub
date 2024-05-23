@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     android:background="#CCE0EE">
 
-    <Button
-        android:id="@+id/shoppingBtnClear"
-        android:layout_width="141dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#42B8D4"
-        android:contentDescription="@string/clear"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shoppingRecyclerView"
         android:layout_width="373dp"
@@ -56,8 +45,8 @@
         android:id="@+id/shoppingBtnAdd"
         android:layout_width="141dp"
         android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#42B8D4"
         android:contentDescription="@string/add"
         app:layout_constraintStart_toStartOf="parent"

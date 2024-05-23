@@ -22,7 +22,7 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
     private ChoresRecyclerViewAdapter.MyHolder holder;
 
 
-    public ChoresRecyclerViewAdapter(Context context, List<Shopping> shoppingList) {
+    public ChoresRecyclerViewAdapter(Context context, List<Chores> choresList) {
         this.context = context;
         this.choresList = choresList;
     }
@@ -59,7 +59,12 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
         holder.description.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                holder.description.setVisibility(View.VISIBLE);
+                if (holder.description.getVisibility() == View.VISIBLE){
+                    holder.description.setVisibility(View.GONE);
+                } else {
+                    holder.description.setVisibility(View.VISIBLE);
+                }
+
                 return true;
             }
         });
@@ -86,4 +91,4 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
         }
     }
 
-}
+

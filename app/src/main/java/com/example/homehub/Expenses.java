@@ -2,7 +2,7 @@ package com.example.homehub;
 
 public class Expenses {
     private String name;
-    private double quantity;
+    private int quantity;
 
     public String getName() {
         return name;
@@ -11,15 +11,15 @@ public class Expenses {
     public void setName(String name) {
         this.name = name;
     }
-    public double getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(double quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public Expenses(String name, double quantity){
+    public Expenses(String name, int quantity){
         this.name = name;
         this.quantity = quantity;
     }

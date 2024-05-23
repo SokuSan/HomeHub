@@ -23,6 +23,7 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
     private EditText quantity;
     private ExpensesList expensesList;
     private Util util;
+    private ExpensesListActivity expensesListActivity;
 
     @SuppressLint("MissingInflatedId")
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -37,7 +38,7 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {
                     String name = this.name.getText().toString();
-                    double quantity = Double.parseDouble(this.quantity.getText().toString());
+                    int quantity = Integer.parseInt(this.quantity.getText().toString());
 
                     Expenses expenses = new Expenses(name, quantity);
                     util = new Util();

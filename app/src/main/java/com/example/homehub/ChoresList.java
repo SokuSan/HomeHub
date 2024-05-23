@@ -37,7 +37,7 @@ public class ChoresList implements Serializable {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    private void loadFromFile() {
+    public void loadFromFile() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath))) {
             choresList = (List<Chores>) ois.readObject();
         } catch (FileNotFoundException e) {

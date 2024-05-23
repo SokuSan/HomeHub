@@ -87,4 +87,12 @@ public class ExpensesList implements Serializable {
             e.printStackTrace();
         }
     }
+    public int calculateTotalQuantity() {
+        int total = 0;
+        for (Expenses expenses : expensesList) {
+            total += expenses.getQuantity();
+        }
+        return total;
+    }
+
 }
