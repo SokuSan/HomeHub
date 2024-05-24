@@ -51,7 +51,7 @@
         app:layout_constraintStart_toEndOf="@+id/recyclerVExTvName"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_72_1720992_trash_vector_png_clipart_rubbish_bins_waste_paper_removebg_preview"
-        android:contentDescription="@string/todo22" />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/recyclerVExTvMoneyQuantity"

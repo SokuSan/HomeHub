@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private Button login;
     private TextView register;
+    private TextView recover;
     private EditText emailEditText;
     private EditText passwordEditText;
     @Override
@@ -34,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         login = findViewById(R.id.optionsBtnLogOut);
         register = findViewById(R.id.loginEtNotAMember);
+        recover = findViewById(R.id.loginEtForgotPwd);
         emailEditText = findViewById(R.id.recoverEtEmail);
         passwordEditText = findViewById(R.id.registerEtPassword);
         Intent intent = new Intent(LoginActivity.this, StartActivity.class);
@@ -58,6 +60,14 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent register = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(register);
+            }
+        });
+
+        recover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent register = new Intent(LoginActivity.this, RecoverPwdActivity.class);
                 startActivity(register);
             }
         });

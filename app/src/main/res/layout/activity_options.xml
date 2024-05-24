@@ -17,15 +17,14 @@
         android:layout_marginTop="108dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo6" />
+        app:srcCompat="@drawable/homehub" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
-        android:layout_width="341dp"
+        android:layout_width="333dp"
         android:layout_height="96dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#42B8D4"
         android:drawableEnd="@drawable/logout"
         android:fontFamily="monospace"
@@ -34,7 +33,7 @@
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsSkMusic"
+        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
         tools:ignore="VisualLintButtonSize" />
 
     <ImageView
@@ -46,48 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/goback"
-        android:contentDescription="@string/todo5" />
-
-    <SeekBar
-        android:id="@+id/optionsSkEffects"
-        android:layout_width="330dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsTvMusic" />
-
-    <SeekBar
-        android:id="@+id/optionsSkMusic"
-        android:layout_width="329dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsTvEffects" />
-
-    <TextView
-        android:id="@+id/optionsTvMusic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="monospace"
-        android:text="@string/music"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
-
-    <TextView
-        android:id="@+id/optionsTvEffects"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="25dp"
-        android:fontFamily="monospace"
-        android:text="@string/effects"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsSkEffects" />
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

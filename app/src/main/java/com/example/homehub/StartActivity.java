@@ -19,6 +19,7 @@ public class StartActivity extends AppCompatActivity {
     private TextView choresTv;
     private ImageView shoppingImg;
     private TextView shoppingTv;
+    private ImageView options;
     private String page;
 
     @Override
@@ -32,6 +33,7 @@ public class StartActivity extends AppCompatActivity {
         choresTv = findViewById(R.id.startTvChores);
         shoppingImg = findViewById(R.id.startImgShopping);
         shoppingTv = findViewById(R.id.startTvShopping);
+        options = findViewById(R.id.startImgOptions);
         page = "none";
 
         expensesImg.setOnClickListener(v -> {
@@ -58,6 +60,11 @@ public class StartActivity extends AppCompatActivity {
             page = "shopping";
             travelIntent(page);
         });
+        options.setOnClickListener(v -> {
+            page = "options";
+            travelIntent(page);
+        });
+
 
     }
     public void travelIntent(String page){
@@ -71,6 +78,9 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case "expenses" :
                 intent = new Intent (StartActivity.this, ExpensesListActivity.class);
+                break;
+            case "options" :
+                intent = new Intent (StartActivity.this, OptionsActivity.class);
                 break;
         }
         startActivity(intent);

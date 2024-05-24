@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo22" />
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/startImgOptions"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/options"
-        android:contentDescription="@string/todo21" />
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/startImgChart"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
         app:srcCompat="@drawable/chart"
-        android:contentDescription="@string/todo18" />
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/startImgHouse"
@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startTvExpenses"
         app:srcCompat="@drawable/house"
-        android:contentDescription="@string/todo19" />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/startTvExpenses"
@@ -75,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startTvChores"
         app:srcCompat="@drawable/shopping"
-        android:contentDescription="@string/todo23" />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/startTvShopping"

@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerImgPwd"
         app:srcCompat="@drawable/password"
-        android:contentDescription="@string/todo12" />
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/startImgLogo"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo13" />
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/recoverEtEmail"
@@ -56,8 +56,6 @@
         android:layout_marginTop="63dp"
         android:autofillHints=""
         android:background="#42B8D4"
-        android:drawableWidth="24dp"
-        android:drawableHeight="24dp"
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="monospace"
@@ -77,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
         app:srcCompat="@drawable/password"
-        android:contentDescription="@string/todo11" />
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/registerEtPassword"
@@ -103,7 +101,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
         app:srcCompat="@drawable/usuario_removebg_preview"
-        android:contentDescription="@string/todo10"
+        android:contentDescription="@string/todo"
         tools:ignore="ContentDescription" />
 
     <Button
@@ -131,6 +129,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut"
         app:srcCompat="@drawable/goback"
-        android:contentDescription="@string/todo0" />
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

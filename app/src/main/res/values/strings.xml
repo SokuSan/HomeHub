@@ -1,32 +1,29 @@
-<resources>
-    <string name="app_name">HomeHub</string>
-    <string name="money">€</string>
-    <string name="xx">xx</string>
-    <string name="TOTAL">TOTAL:</string>
-    <string name="EXPENSES_LIST">EXPENSES LIST</string>
-    <string name="Substract" />
-    <string name="add" />
-    <string name="todo">TODO</string>
-    <string name="remember_this_device">Remember this device</string>
-    <string name="did_you_forgot_your_password">Did you forgot your password?</string>
-    <string name="not_a_member_sign_up_now">Not a member? Sign up now!</string>
-    <string name="log_in">LOG IN</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="log_out">Log Out</string>
-    <string name="effects">Effects</string>
-    <string name="music">Music</string>
-    <string name="send">SEND</string>
-    <string name="insert_your_email_to_receive_a_password_recovery_email">Insert your email to receive a password recovery email</string>
-    <string name="todo9">TODO</string>
-    <string name="register">REGISTER</string>
-    <string name="chores_list">CHORES LIST</string>
-    <string name="shopping_list">SHOPPING LIST</string>
-    <string name="todo16">TODO</string>
-    <string name="clear" />
-    <string name="shopping">SHOPPING</string>
-    <string name="expenses">EXPENSES</string>
-    <string name="todo22">TODO</string>
-    <string name="name">Name</string>
-    <string name="description">Description</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">HomeHub</string>
+    <string name="money" translatable="false">€</string>
+    <string name="xx" translatable="false">xx</string>
+    <string name="TOTAL" translatable="false">TOTAL:</string>
+    <string name="EXPENSES_LIST" translatable="false">EXPENSES LIST</string>
+    <string name="Substract" translatable="false" />
+    <string name="add" translatable="false" />
+    <string name="remember_this_device" translatable="false">Remember this device</string>
+    <string name="did_you_forgot_your_password" translatable="false">Did you forgot your password?</string>
+    <string name="not_a_member_sign_up_now" translatable="false">Not a member? Sign up now!</string>
+    <string name="log_in" translatable="false">LOG IN</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="log_out" translatable="false">Log Out</string>
+    <string name="effects" translatable="false">Effects</string>
+    <string name="music" translatable="false">Music</string>
+    <string name="send" translatable="false">SEND</string>
+    <string name="insert_your_email_to_receive_a_password_recovery_email" translatable="false">Insert your email to receive a password recovery email</string>
+    <string name="register" translatable="false">REGISTER</string>
+    <string name="chores_list" translatable="false">CHORES LIST</string>
+    <string name="shopping_list" translatable="false">SHOPPING LIST</string>
+    <string name="clear" translatable="false" />
+    <string name="shopping" translatable="false">SHOPPING</string>
+    <string name="expenses" translatable="false">EXPENSES</string>
+    <string name="name" translatable="false">Name</string>
+    <string name="description" translatable="false">Description</string>
+    <string name="todo" tools:ignore="DuplicateDefinition" translatable="false">TODO</string>
 </resources>

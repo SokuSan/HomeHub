@@ -21,6 +21,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ShoppingListActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true">
+        </activity>
+        <activity
+                android:name=".RecoverPwdActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ChoresListActivity"
+            android:exported="true">
+        </activity>
+        <activity
+        android:name=".ExpensesListActivity"
+        android:exported="true">
+        </activity>
+        <activity
+        android:name=".OptionsActivity"
+        android:exported="true">
+        </activity>
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo9" />
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/recoverEtEmail"
@@ -28,8 +28,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="104dp"
         android:background="#42B8D4"
-        android:drawableWidth="24dp"
-        android:drawableHeight="24dp"
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="monospace"
@@ -50,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
         app:srcCompat="@drawable/usuario_removebg_preview"
-        android:contentDescription="@string/todo8" />
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
@@ -77,7 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut"
         app:srcCompat="@drawable/goback"
-        android:contentDescription="@string/todo7" />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/recoverTvInsertEmail"

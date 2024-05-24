@@ -13,7 +13,7 @@
         android:layout_marginStart="329dp"
         android:layout_marginTop="479dp"
         android:clickable="true"
-        android:contentDescription="@string/todo14"
+        android:contentDescription="@string/todo"
         android:focusable="true"
         app:backgroundTint="#42B8D4"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,10 +27,10 @@
         android:layout_height="84dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="9dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo15" />
+        app:srcCompat="@drawable/homehub" />
 
     <TextView
         android:id="@+id/choresTvTitle"

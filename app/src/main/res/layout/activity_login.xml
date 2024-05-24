@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub"
-        android:contentDescription="@string/todo4" />
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/recoverEtEmail"
@@ -29,8 +29,6 @@
         android:layout_marginTop="63dp"
         android:autofillHints=""
         android:background="#42B8D4"
-        android:drawableWidth="24dp"
-        android:drawableHeight="24dp"
         android:drawablePadding="8dp"
         android:ems="10"
         android:fontFamily="monospace"
@@ -63,7 +61,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
         app:srcCompat="@drawable/password"
-        android:contentDescription="@string/todo3" />
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/registerEtPassword"
@@ -86,10 +84,10 @@
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="63dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
-        app:srcCompat="@drawable/usuario_removebg_preview"
-        android:contentDescription="@string/todo2" />
+        app:srcCompat="@drawable/usuario_removebg_preview" />
 
     <TextView
         android:id="@+id/loginEtNotAMember"
