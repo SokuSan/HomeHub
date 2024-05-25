@@ -37,8 +37,8 @@ public class AddShoppingActivity extends AppCompatDialogFragment implements Seri
 
                     Shopping shopping = new Shopping(name);
                     util = new Util();
-                    shoppingList = util.initializeShopping();
-                    shoppingList.addShopping(shopping);
+                    shoppingList = util.initializeShopping(getContext());
+                    shoppingList.addShopping(shopping, getContext());
 
                     addShoppingDialogInterface.AddShoppingActivity(shopping);
                 })
@@ -52,4 +52,6 @@ public class AddShoppingActivity extends AppCompatDialogFragment implements Seri
         super.onAttach(context);
         addShoppingDialogInterface = (AddShoppingDialogInterface) context;
     }
+
+
 }

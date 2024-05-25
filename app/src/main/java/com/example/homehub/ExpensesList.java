@@ -8,10 +8,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-    public class ExpensesList {
+    public class ExpensesList implements Serializable {
         private List<Expenses> expensesList = new ArrayList<>();
         private final String filename = "expenses.txt";
 
@@ -29,7 +30,7 @@ import java.util.List;
 
         public void addExpenses(Expenses expenses, Context context) {
             expensesList.add(expenses);
-            saveToFile(context); // Guardar en archivo cada vez que se agrega un gasto
+            saveToExpensesFile(expensesList, context); // Guardar en archivo cada vez que se agrega un gasto
         }
 
         private void loadFromFile(Context context) {
@@ -56,11 +57,11 @@ import java.util.List;
             }
         }
 
-        private void saveToFile(Context context) {
+        public void saveToExpensesFile(List<Expenses> expensesList, Context context) {
             try {
                 FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE);
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(fos));
-                for (Expenses expenses : expensesList) {
+                for (Expenses expenses : this.expensesList) {
                     bufferedWriter.write(expenses.getName() + "," + expenses.getQuantity() + "\n");
                 }
                 bufferedWriter.close();

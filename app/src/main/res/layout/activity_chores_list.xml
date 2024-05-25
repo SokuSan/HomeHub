@@ -52,4 +52,14 @@
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/choresTvTitle" />
+
+    <ImageView
+        android:id="@+id/choresImgBack"
+        android:layout_width="139dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/choresImgLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/goback" />
 </androidx.constraintlayout.widget.ConstraintLayout>

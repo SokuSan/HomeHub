@@ -71,7 +71,7 @@ public class StartActivity extends AppCompatActivity {
         Intent intent = new Intent (StartActivity.this, StartActivity.class);;
         switch(page){
             case "chores" :
-                intent = new Intent (StartActivity.this, ChoresList.class);
+                intent = new Intent (StartActivity.this, ChoresListActivity.class);
                 break;
             case "shopping" :
                 intent = new Intent (StartActivity.this, ShoppingListActivity.class);

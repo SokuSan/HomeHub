@@ -42,8 +42,8 @@ public class AddChoresActivity extends AppCompatDialogFragment implements Serial
 
                     Chores chores = new Chores(name, description);
                     util = new Util();
-                    choresList = util.initializeChores();
-                    choresList.addChores(chores);
+                    choresList = util.initializeChores(getContext());
+                    choresList.addChores(chores, getContext());
 
                     addChoresDialogInterface.AddChoresActivity(chores);
                 })

@@ -1,27 +1,26 @@
 package com.example.homehub;
 
+import android.content.Context;
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingList implements Serializable {
     private List<Shopping> shoppingList = new ArrayList<>();
-    private final String filePath = "path/to/your/file/dishes.dat"; // Reemplaza con la ruta real del archivo
-
-    public ShoppingList() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            loadFromFile();
-        }
+    private final String filename = "shopping.txt";
+    public ShoppingList(Context context) {
+            loadFromFile(context);
     }
 
     public List<Shopping> getShoppingList() {
@@ -32,57 +31,72 @@ public class ShoppingList implements Serializable {
         this.shoppingList = shoppingList;
     }
 
-    public void addShopping(Shopping shopping) {
+    public void addShopping(Shopping shopping, Context context) {
         shoppingList.add(shopping);
+        saveToShoppingFile(context, shoppingList);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private void loadFromFile() {
-        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filePath))) {
-            shoppingList = (List<Shopping>) ois.readObject();
-        } catch (FileNotFoundException e) {
-            generateDefaultList();
-            saveToFile();
-        } catch (IOException | ClassNotFoundException e) {
+    private void loadFromFile(Context context) {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.openFileInput(filename)));
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                // Parsear cada línea como un gasto y agregarlo a la lista
+                String[] parts = line.split(",");
+                if (parts.length == 1) {
+                    String name = parts[0];
+                    shoppingList.add(new Shopping(name));
+                }
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
             e.printStackTrace();
-            generateDefaultList();
+        }
+
+        // Si la lista está vacía después de cargar desde el archivo, generar una nueva lista
+        if (shoppingList.isEmpty()) {
+            generateDefaultList(context);
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private void generateDefaultList() {
-        shoppingList.add(new Shopping("Milk"));
-        shoppingList.add(new Shopping("Bread"));
-        shoppingList.add(new Shopping("Eggs"));
-        shoppingList.add(new Shopping("Butter"));
-        shoppingList.add(new Shopping("Cheese"));
-        shoppingList.add(new Shopping("Chicken breast"));
-        shoppingList.add(new Shopping("Ground beef"));
-        shoppingList.add(new Shopping("Carrots"));
-        shoppingList.add(new Shopping("Broccoli"));
-        shoppingList.add(new Shopping("Apples"));
-        shoppingList.add(new Shopping("Bananas"));
-        shoppingList.add(new Shopping("Oranges"));
-        shoppingList.add(new Shopping("Tomatoes"));
-        shoppingList.add(new Shopping("Lettuce"));
-        shoppingList.add(new Shopping("Potatoes"));
-        shoppingList.add(new Shopping("Onions"));
-        shoppingList.add(new Shopping("Garlic"));
-        shoppingList.add(new Shopping("Rice"));
-        shoppingList.add(new Shopping("Pasta"));
-        shoppingList.add(new Shopping("Olive oil"));
-        shoppingList.add(new Shopping("Salt"));
-        shoppingList.add(new Shopping("Pepper"));
-        shoppingList.add(new Shopping("Yogurt"));
-        shoppingList.add(new Shopping("Orange juice"));
-        shoppingList.add(new Shopping("Cereal"));
+    private void generateDefaultList(Context context) {
+        addShopping(new Shopping("Milk"), context);
+        addShopping(new Shopping("Bread"), context);
+        addShopping(new Shopping("Eggs"), context);
+        addShopping(new Shopping("Butter"), context);
+        addShopping(new Shopping("Cheese"), context);
+        addShopping(new Shopping("Chicken breast"), context);
+        addShopping(new Shopping("Ground beef"), context);
+        addShopping(new Shopping("Carrots"), context);
+        addShopping(new Shopping("Broccoli"), context);
+        addShopping(new Shopping("Apples"), context);
+        addShopping(new Shopping("Bananas"), context);
+        addShopping(new Shopping("Oranges"), context);
+        addShopping(new Shopping("Tomatoes"), context);
+        addShopping(new Shopping("Lettuce"), context);
+        addShopping(new Shopping("Potatoes"), context);
+        addShopping(new Shopping("Onions"), context);
+        addShopping(new Shopping("Garlic"), context);
+        addShopping(new Shopping("Rice"), context);
+        addShopping(new Shopping("Pasta"), context);
+        addShopping(new Shopping("Olive oil"), context);
+        addShopping(new Shopping("Salt"), context);
+        addShopping(new Shopping("Pepper"), context);
+        addShopping(new Shopping("Yogurt"), context);
+        addShopping(new Shopping("Orange juice"), context);
+        addShopping(new Shopping("Cereal"), context);
     }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public void saveToFile() {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath))) {
-            oos.writeObject(shoppingList);
+
+    public void saveToShoppingFile(Context context, List<Shopping> shoppingList) {
+        try {
+            FileOutputStream fos = context.openFileOutput(filename, Context.MODE_PRIVATE);
+            BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(fos));
+            for (Shopping shopping : this.shoppingList) {
+                bufferedWriter.write(shopping.getName() + "\n");
+            }
+            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

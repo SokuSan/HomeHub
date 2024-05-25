@@ -19,12 +19,14 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
 
     private Context context;
     private List<Chores> choresList;
+    private ChoresList choresListInstance;
     private ChoresRecyclerViewAdapter.MyHolder holder;
 
 
     public ChoresRecyclerViewAdapter(Context context, List<Chores> choresList) {
         this.context = context;
         this.choresList = choresList;
+        choresListInstance = new ChoresList(context);
     }
 
     @NonNull
@@ -50,13 +52,15 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
                 int adapterPosition = holder.getAdapterPosition();
                 if (adapterPosition != RecyclerView.NO_POSITION) {
                     choresList.remove(adapterPosition);
+                    choresListInstance.setChoresList(choresList);
+                    choresListInstance.saveToChoresFile(context, choresList);
                     notifyItemRemoved(adapterPosition);
                     Toast.makeText(context, "Deleted Line", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-        holder.description.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.name.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 if (holder.description.getVisibility() == View.VISIBLE){

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ShoppingListActivity extends AppCompatActivity {
+public class ShoppingListActivity extends AppCompatActivity implements AddShoppingDialogInterface{
     private Button add;
     private Util util;
     private ShoppingList shoppingList;
@@ -26,7 +26,7 @@ public class ShoppingListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         util = new Util();
         add = findViewById(R.id.shoppingBtnAdd);
-        shoppingList = util.initializeShopping();
+        shoppingList = util.initializeShopping(getApplicationContext());
 
         assignment();
 
@@ -45,4 +45,9 @@ public class ShoppingListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    @Override
+    public void AddShoppingActivity(Shopping shopping) {
+        shoppingList.addShopping(shopping, getApplicationContext());
+        shoppingRecyclerViewAdapter.notifyItemInserted(shoppingList.getShoppingList().size() - 1);
+    }
 }

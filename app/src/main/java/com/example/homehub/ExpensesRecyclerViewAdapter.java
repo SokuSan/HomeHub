@@ -15,16 +15,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRecyclerViewAdapter.MyHolder>{
+public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRecyclerViewAdapter.MyHolder> {
 
     private Context context;
     private List<Expenses> expensesList;
-    private ExpensesRecyclerViewAdapter.MyHolder holder;
-
+    private ExpensesList expensesListInstance;
 
     public ExpensesRecyclerViewAdapter(Context context, List<Expenses> expensesList) {
         this.context = context;
         this.expensesList = expensesList;
+        this.expensesListInstance = new ExpensesList(context);
     }
 
     @NonNull
@@ -40,8 +40,6 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
     public void onBindViewHolder(@NonNull ExpensesRecyclerViewAdapter.MyHolder holder, int position) {
         Expenses expenses = expensesList.get(position);
         holder.name.setText(expenses.getName());
-
-        // Convert the quantity to a string before setting it to the TextView
         holder.quantity.setText(String.valueOf(expenses.getQuantity()));
 
         holder.bin.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +49,8 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
                 if (adapterPosition != RecyclerView.NO_POSITION) {
                     expensesList.remove(adapterPosition);
                     notifyItemRemoved(adapterPosition);
+                    expensesListInstance.setExpensesList(expensesList);
+                    expensesListInstance.saveToExpensesFile(expensesList, context);
                     Toast.makeText(context, "Deleted Line", Toast.LENGTH_SHORT).show();
                 }
             }

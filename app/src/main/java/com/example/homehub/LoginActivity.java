@@ -3,10 +3,13 @@ package com.example.homehub;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView register;
     private TextView recover;
     private EditText emailEditText;
+    private CheckBox rememberDevice;
     private EditText passwordEditText;
 
     @Override
@@ -35,15 +39,19 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+        rememberDevice = findViewById(R.id.loginCheckRememberDevice);
         login = findViewById(R.id.optionsBtnLogOut);
         register = findViewById(R.id.loginEtNotAMember);
         recover = findViewById(R.id.loginEtForgotPwd);
         emailEditText = findViewById(R.id.recoverEtEmail);
         passwordEditText = findViewById(R.id.registerEtPassword);
-        Intent intent = new Intent(LoginActivity.this, StartActivity.class);
+
+        SharedPreferences preferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE);
+        boolean rememberMe = preferences.getBoolean("rememberMe", false);
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            currentUser.reload();
+
+        if (rememberMe && currentUser != null) {
+            updateUI(currentUser);
         }
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +104,11 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
+                            if (rememberDevice.isChecked()) {
+                                savePreferences(true);
+                            } else {
+                                savePreferences(false);
+                            }
                             updateUI(user);
                         } else {
                             handleLoginError(task.getException());
@@ -120,6 +133,14 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, StartActivity.class);
             startActivity(intent);
+            finish();
         }
+    }
+
+    private void savePreferences(boolean remember) {
+        SharedPreferences preferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("rememberMe", remember);
+        editor.apply();
     }
 }

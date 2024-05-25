@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -14,8 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ChoresListActivity extends AppCompatActivity {
+public class ChoresListActivity extends AppCompatActivity implements AddChoresDialogInterface{
     private FloatingActionButton floatingBtn;
+    private ImageView back;
     private Util util;
     private ChoresList choresList;
     private ChoresRecyclerViewAdapter choresRecyclerViewAdapter;
@@ -28,7 +30,8 @@ public class ChoresListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         util = new Util();
         floatingBtn = findViewById(R.id.choresFloatingBtn);
-        choresList = util.initializeChores();
+        back = findViewById(R.id.choresImgBack);
+        choresList = util.initializeChores(getApplicationContext());
 
         assignment();
 
@@ -36,6 +39,12 @@ public class ChoresListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AddChoresActivity addChoresActivity = new AddChoresActivity();
                 addChoresActivity.show(getSupportFragmentManager(), "");
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intentBack = new Intent(ChoresListActivity.this, StartActivity.class);
+                startActivity(intentBack);
             }
         });
 
@@ -48,5 +57,11 @@ public class ChoresListActivity extends AppCompatActivity {
         choresRecyclerViewAdapter = new ChoresRecyclerViewAdapter(this, choresList.getChoresList());
         recyclerView.setAdapter(choresRecyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void AddChoresActivity(Chores chores) {
+        choresList.addChores(chores, getApplicationContext());
+        choresRecyclerViewAdapter.notifyItemInserted(choresList.getChoresList().size() - 1);
     }
 }
