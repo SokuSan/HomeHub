@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -14,8 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ExpensesListActivity extends AppCompatActivity {
+public class ExpensesListActivity extends AppCompatActivity implements AddExpensesDialogInterface{
     private Button add;
+    private ImageView back;
     private Util util;
     private TextView total;
     private ExpensesList expensesList;
@@ -28,9 +30,10 @@ public class ExpensesListActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         util = new Util();
+        back = findViewById(R.id.expensesBackbtn);
         add = findViewById(R.id.expensesButtonAdd);
         total = findViewById(R.id.expensesTvQuantity);
-        expensesList = util.initializeExpenses();
+        expensesList = util.initializeExpenses(getApplicationContext());
 
         assignment();
         total.setText(expensesList.calculateTotalQuantity());
@@ -38,6 +41,12 @@ public class ExpensesListActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AddExpensesActivity addExpensesActivity = new AddExpensesActivity();
                 addExpensesActivity.show(getSupportFragmentManager(), "");
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+               Intent intentBack = new Intent(ExpensesListActivity.this, StartActivity.class);
+               startActivity(intentBack);
             }
         });
     }
@@ -48,5 +57,12 @@ public class ExpensesListActivity extends AppCompatActivity {
         expensesRecyclerViewAdapter = new ExpensesRecyclerViewAdapter(this, expensesList.getExpensesList());
         recyclerView.setAdapter(expensesRecyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public void AddExpensesActivity(Expenses expenses) {
+        expensesList.addExpenses(expenses, getApplicationContext());
+        expensesRecyclerViewAdapter.notifyItemInserted(expensesList.getExpensesList().size() - 1);
+        total.setText(expensesList.calculateTotalQuantity());
     }
 }

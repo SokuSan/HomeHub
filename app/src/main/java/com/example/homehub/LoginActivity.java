@@ -27,12 +27,14 @@ public class LoginActivity extends AppCompatActivity {
     private TextView recover;
     private EditText emailEditText;
     private EditText passwordEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
+
         login = findViewById(R.id.optionsBtnLogOut);
         register = findViewById(R.id.loginEtNotAMember);
         recover = findViewById(R.id.loginEtForgotPwd);
@@ -40,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.registerEtPassword);
         Intent intent = new Intent(LoginActivity.this, StartActivity.class);
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
+        if (currentUser != null) {
             currentUser.reload();
         }
 
@@ -75,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean validateInput(String email, String password) {
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            Toast.makeText(LoginActivity.this, "invalid email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Invalid email", Toast.LENGTH_SHORT).show();
             return false;
         }
 
@@ -95,7 +97,6 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-
                         } else {
                             handleLoginError(task.getException());
                             updateUI(null);

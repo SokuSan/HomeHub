@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDialogFragment;
+import androidx.fragment.app.FragmentManager;
 
 import java.io.Serializable;
 
@@ -42,15 +43,17 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
 
                     Expenses expenses = new Expenses(name, quantity);
                     util = new Util();
-                    expensesList = util.initializeExpenses();
-                    expensesList.addExpenses(expenses);
+                    expensesList = util.initializeExpenses(getContext());
+                    expensesList.addExpenses(expenses, getContext());
 
                     addExpensesDialogInterface.AddExpensesActivity(expenses);
                 })
                 .setNegativeButton("Cancel", (dialogInterface, i) -> {
+                    dismiss();
                 });
         return builder.create();
     }
+
 
     @Override
     public void onAttach(@NonNull Context context) {

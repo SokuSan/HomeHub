@@ -3,38 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:background="#CCE0EE">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/recyclerVEx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="146dp"
+        android:layout_width="409dp"
+        android:layout_height="25dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="403dp"
         app:cardBackgroundColor="#CCE0EE"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerVExTvMoney"
         tools:ignore="VisualLintBounds" />
 
     <ImageView
         android:id="@+id/recyclerVExImgCircle"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
+        android:layout_width="16dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:contentDescription="Circle Image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/blackciercle"
-        android:contentDescription="TODO"
         tools:ignore="ContentDescription,HardcodedText" />
 
     <TextView
         android:id="@+id/recyclerVExTvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="34dp"
+        android:layout_width="187dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="@string/name"
         android:textSize="24sp"
@@ -42,23 +42,12 @@
         app:layout_constraintStart_toEndOf="@+id/recyclerVExImgCircle"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/recyclerVExImgBin"
-        android:layout_width="66dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="197dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintStart_toEndOf="@+id/recyclerVExTvName"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/_72_1720992_trash_vector_png_clipart_rubbish_bins_waste_paper_removebg_preview"
-        android:contentDescription="@string/todo" />
-
     <TextView
         android:id="@+id/recyclerVExTvMoneyQuantity"
-        android:layout_width="59dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="79dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="XX"
         android:textSize="24sp"
@@ -70,13 +59,24 @@
         android:id="@+id/recyclerVExTvMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="€"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recyclerVExTvMoneyQuantity"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/recyclerVExImgBin"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Bin Image"
+        app:layout_constraintStart_toEndOf="@+id/recyclerVExTvMoney"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_72_1720992_trash_vector_png_clipart_rubbish_bins_waste_paper_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

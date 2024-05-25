@@ -40,8 +40,9 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
     public void onBindViewHolder(@NonNull ExpensesRecyclerViewAdapter.MyHolder holder, int position) {
         Expenses expenses = expensesList.get(position);
         holder.name.setText(expenses.getName());
-        holder.quantity.setText((int) expenses.getQuantity());
 
+        // Convert the quantity to a string before setting it to the TextView
+        holder.quantity.setText(String.valueOf(expenses.getQuantity()));
 
         holder.bin.setOnClickListener(new View.OnClickListener() {
             @Override

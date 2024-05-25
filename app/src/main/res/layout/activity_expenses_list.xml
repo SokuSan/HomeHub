@@ -10,7 +10,7 @@
         android:id="@+id/expensesButtonAdd"
         android:layout_width="141dp"
         android:layout_height="56dp"
-        android:layout_marginStart="132dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="#42B8D4"
         android:contentDescription="@string/add"
@@ -37,8 +37,8 @@
         android:id="@+id/expensesTvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="monospace"
         android:text="@string/EXPENSES_LIST"
         android:textSize="48sp"
@@ -50,8 +50,8 @@
         android:id="@+id/expensesTvTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="monospace"
         android:text="@string/TOTAL"
         android:textSize="34sp"
@@ -61,10 +61,10 @@
 
     <TextView
         android:id="@+id/expensesTvQuantity"
-        android:layout_width="110dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="124dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="23dp"
         android:fontFamily="monospace"
         android:text="@string/xx"
         android:textAlignment="center"
@@ -78,8 +78,8 @@
         android:id="@+id/expensesTvMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginTop="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="87dp"
         android:fontFamily="monospace"
         android:text="@string/money"
         android:textSize="34sp"
@@ -89,10 +89,20 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/expensesRecyclerView"
-        android:layout_width="377dp"
-        android:layout_height="424dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="385dp"
+        android:layout_height="453dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/expensesTvMoney" />
+        app:layout_constraintTop_toBottomOf="@+id/expensesTvTotal" />
+
+    <ImageView
+        android:id="@+id/expensesBackbtn"
+        android:layout_width="139dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@+id/expensesImgLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/goback" />
 </androidx.constraintlayout.widget.ConstraintLayout>
