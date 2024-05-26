@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,6 +35,11 @@ public class AddShoppingActivity extends AppCompatDialogFragment implements Seri
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {
                     String name = this.name.getText().toString();
+
+                    if (name.isEmpty()) {
+                        Toast.makeText(getContext(), "Name can't be empty.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
                     Shopping shopping = new Shopping(name);
                     util = new Util();

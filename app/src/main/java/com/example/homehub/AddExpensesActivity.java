@@ -9,12 +9,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatDialogFragment;
-import androidx.fragment.app.FragmentManager;
 
 import java.io.Serializable;
 
@@ -24,7 +24,6 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
     private EditText quantity;
     private ExpensesList expensesList;
     private Util util;
-    private ExpensesListActivity expensesListActivity;
 
     @SuppressLint("MissingInflatedId")
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -39,21 +38,35 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {
                     String name = this.name.getText().toString();
-                    int quantity = Integer.parseInt(this.quantity.getText().toString());
+                    String quantityStr = this.quantity.getText().toString();
 
-                    Expenses expenses = new Expenses(name, quantity);
-                    util = new Util();
-                    expensesList = util.initializeExpenses(getContext());
-                    expensesList.addExpenses(expenses, getContext());
+                    if (name.isEmpty()) {
+                        Toast.makeText(getContext(), "Name can't be empty.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
-                    addExpensesDialogInterface.AddExpensesActivity(expenses);
+                    try {
+                        if (!quantityStr.matches("[-+]?\\d+(\\.\\d{1,2})?")) {
+                            throw new NumberFormatException();
+                        }
+
+                        double quantity = Double.parseDouble(quantityStr);
+
+                        Expenses expenses = new Expenses(name, quantity);
+                        util = new Util();
+                        expensesList = util.initializeExpenses(getContext());
+                        expensesList.addExpenses(expenses, getContext());
+
+                        addExpensesDialogInterface.AddExpensesActivity(expenses);
+                    } catch (NumberFormatException e) {
+                        Toast.makeText(getContext(), "The number must have up to two decimal places and may start with + or -.", Toast.LENGTH_SHORT).show();
+                    }
                 })
                 .setNegativeButton("Cancel", (dialogInterface, i) -> {
                     dismiss();
                 });
         return builder.create();
     }
-
 
     @Override
     public void onAttach(@NonNull Context context) {

@@ -84,13 +84,17 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private boolean validateInput(String email, String password) {
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             Toast.makeText(LoginActivity.this, "Invalid email", Toast.LENGTH_SHORT).show();
             return false;
         }
+        if (email.isEmpty()) {
+            Toast.makeText(LoginActivity.this, "Empty email", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
-        if (password.isEmpty() || password.length() < 6) {
-            Toast.makeText(LoginActivity.this, "Invalid password (at least 6 characters)", Toast.LENGTH_SHORT).show();
+        if (password.isEmpty()) {
+            Toast.makeText(LoginActivity.this, "Empty password", Toast.LENGTH_SHORT).show();
             return false;
         }
 

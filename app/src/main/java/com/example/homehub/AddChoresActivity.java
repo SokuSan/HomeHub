@@ -8,8 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +39,15 @@ public class AddChoresActivity extends AppCompatDialogFragment implements Serial
                     String name = this.name.getText().toString();
                     String description = this.description.getText().toString();
 
+                    if (name.isEmpty()) {
+                        Toast.makeText(getContext(), "Name can't be empty.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    if (description.isEmpty()) {
+                        description = name;
+                    }
+
                     Chores chores = new Chores(name, description);
                     util = new Util();
                     choresList = util.initializeChores(getContext());
@@ -57,5 +65,4 @@ public class AddChoresActivity extends AppCompatDialogFragment implements Serial
         super.onAttach(context);
         addChoresDialogInterface = (AddChoresDialogInterface) context;
     }
-
 }

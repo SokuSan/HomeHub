@@ -56,12 +56,20 @@ public class RegisterActivity extends AppCompatActivity {
         String password = etPassword.getText().toString().trim();
         String repeatPassword = etRepeatPassword.getText().toString().trim();
 
-        if (email.isEmpty() || password.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty() || repeatPassword.isEmpty()) {
             Toast.makeText(this, "Please fill in all the fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Toast.makeText(this, "Invalid email", Toast.LENGTH_SHORT).show();
             return;
         }
         if (!password.equals(repeatPassword)){
             Toast.makeText(this, "The password is'nt the same in both fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (password.length() > 6){
+            Toast.makeText(this, "The password may be at least 6 characters long", Toast.LENGTH_SHORT).show();
             return;
         }
         mAuth.createUserWithEmailAndPassword(email, password)

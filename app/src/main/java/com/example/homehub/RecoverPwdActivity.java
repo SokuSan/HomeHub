@@ -2,6 +2,7 @@ package com.example.homehub;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,7 +33,11 @@ public class RecoverPwdActivity extends AppCompatActivity {
         btnSend.setOnClickListener(v -> {
             String email = etEmail.getText().toString().trim();
             if (email.isEmpty()) {
-                Toast.makeText(RecoverPwdActivity.this, "Please enter your email address", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecoverPwdActivity.this, "Name cannot be empty", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(RecoverPwdActivity.this, "Invalid email format", Toast.LENGTH_SHORT).show();
                 return;
             }
             resetPassword(email, intent);
@@ -41,8 +46,6 @@ public class RecoverPwdActivity extends AppCompatActivity {
         btnBack.setOnClickListener(v -> {
             startActivity(intent);
         });
-
-
     }
 
     private void resetPassword(String email, Intent intent) {

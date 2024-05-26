@@ -20,11 +20,13 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
     private Context context;
     private List<Expenses> expensesList;
     private ExpensesList expensesListInstance;
+    private UpdateTotalCallback updateTotalCallback;
 
-    public ExpensesRecyclerViewAdapter(Context context, List<Expenses> expensesList) {
+    public ExpensesRecyclerViewAdapter(Context context, List<Expenses> expensesList, UpdateTotalCallback updateTotalCallback) {
         this.context = context;
         this.expensesList = expensesList;
         this.expensesListInstance = new ExpensesList(context);
+        this.updateTotalCallback = updateTotalCallback;
     }
 
     @NonNull
@@ -52,6 +54,7 @@ public class ExpensesRecyclerViewAdapter extends RecyclerView.Adapter<ExpensesRe
                     expensesListInstance.setExpensesList(expensesList);
                     expensesListInstance.saveToExpensesFile(expensesList, context);
                     Toast.makeText(context, "Deleted Line", Toast.LENGTH_SHORT).show();
+                    updateTotalCallback.updateTotal();
                 }
             }
         });
