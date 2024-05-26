@@ -3,18 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
     android:background="#CCE0EE">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/recyclerVEx"
-        android:layout_width="409dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginStart="403dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="27dp"
         app:cardBackgroundColor="#CCE0EE"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerVExTvMoney"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerVExTvMoneyQuantity"
         tools:ignore="VisualLintBounds" />
 
     <ImageView
@@ -31,12 +32,13 @@
 
     <TextView
         android:id="@+id/recyclerVExTvName"
-        android:layout_width="187dp"
-        android:layout_height="29dp"
+        android:layout_width="300dp"
+        android:layout_height="67dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="@string/name"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recyclerVExImgCircle"
@@ -44,29 +46,31 @@
 
     <TextView
         android:id="@+id/recyclerVExTvMoneyQuantity"
-        android:layout_width="79dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="monospace"
         android:text="XX"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/recyclerVExTvName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerVExTvName" />
 
     <TextView
         android:id="@+id/recyclerVExTvMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="monospace"
         android:text="€"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recyclerVExTvMoneyQuantity"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerVExTvName" />
 
     <ImageView
         android:id="@+id/recyclerVExImgBin"
@@ -75,7 +79,7 @@
         android:layout_marginStart="9dp"
         android:layout_marginTop="4dp"
         android:contentDescription="Bin Image"
-        app:layout_constraintStart_toEndOf="@+id/recyclerVExTvMoney"
+        app:layout_constraintStart_toEndOf="@+id/recyclerVExTvName"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_72_1720992_trash_vector_png_clipart_rubbish_bins_waste_paper_removebg_preview" />
 

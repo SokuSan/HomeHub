@@ -23,6 +23,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/shopping_list"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

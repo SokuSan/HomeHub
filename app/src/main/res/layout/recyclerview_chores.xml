@@ -28,12 +28,13 @@
 
     <TextView
         android:id="@+id/recyclerVChTvName"
-        android:layout_width="264dp"
-        android:layout_height="39dp"
+        android:layout_width="268dp"
+        android:layout_height="75dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="34dp"
         android:fontFamily="monospace"
         android:text="@string/name"
+        android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/recyclerVChImgCircle"
@@ -53,11 +54,12 @@
 
     <TextView
         android:id="@+id/recyclerVChTvDescription"
-        android:layout_width="264dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="6dp"
+        android:layout_width="266dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="4dp"
         android:text="@string/description"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerVChTvName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

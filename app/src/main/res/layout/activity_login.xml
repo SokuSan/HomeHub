@@ -69,14 +69,15 @@
         android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="27dp"
+        android:autofillHints=""
         android:background="#42B8D4"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:textColor="#000000"
         android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
-        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
 
     <ImageView
         android:id="@+id/recoverImgEmail"
@@ -127,6 +128,7 @@
         android:fontFamily="monospace"
         android:minHeight="48dp"
         android:text="@string/remember_this_device"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEtForgotPwd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

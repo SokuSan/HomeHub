@@ -15,15 +15,16 @@
         android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="31dp"
+        android:autofillHints=""
         android:background="#42B8D4"
         android:ems="10"
         android:hint="Repeat password"
         android:inputType="textPassword"
+        android:textColor="#000000"
         android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/registerImgRepeatPwd"
         app:layout_constraintTop_toBottomOf="@+id/registerEtPassword"
-        tools:ignore="HardcodedText"
-        android:autofillHints="" />
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:id="@+id/registerImgRepeatPwd"
@@ -83,14 +84,15 @@
         android:layout_height="48dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="27dp"
+        android:autofillHints=""
         android:background="#42B8D4"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:textColor="#000000"
         android:textColorHint="#263238"
         app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
-        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
 
     <ImageView
         android:id="@+id/recoverImgEmail"
