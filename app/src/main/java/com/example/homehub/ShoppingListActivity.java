@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class ShoppingListActivity extends AppCompatActivity implements AddShoppingDialogInterface{
     private Button add;
     private Util util;
+    private ImageView back;
     private ShoppingList shoppingList;
     private ShoppingRecyclerViewAdapter shoppingRecyclerViewAdapter;
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -25,6 +27,7 @@ public class ShoppingListActivity extends AppCompatActivity implements AddShoppi
 
         Intent intent = getIntent();
         util = new Util();
+        back = findViewById(R.id.shoppingImgBack);
         add = findViewById(R.id.shoppingBtnAdd);
         shoppingList = util.initializeShopping(getApplicationContext());
 
@@ -32,8 +35,15 @@ public class ShoppingListActivity extends AppCompatActivity implements AddShoppi
 
         add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                AddExpensesActivity addExpensesActivity = new AddExpensesActivity();
-                addExpensesActivity.show(getSupportFragmentManager(), "");
+                AddShoppingActivity addShoppingActivity = new AddShoppingActivity();
+                addShoppingActivity.show(getSupportFragmentManager(), "");
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intentBack = new Intent(ShoppingListActivity.this, StartActivity.class);
+                startActivity(intentBack);
             }
         });
     }

@@ -24,11 +24,13 @@ public class ShoppingRecyclerViewAdapter extends RecyclerView.Adapter<ShoppingRe
     private Context context;
     private List<Shopping> shoppingList;
     private MyHolder holder;
+    private ShoppingList shoppingListInstance;
 
 
     public ShoppingRecyclerViewAdapter(Context context, List<Shopping> shoppingList) {
         this.context = context;
         this.shoppingList = shoppingList;
+        shoppingListInstance = new ShoppingList(context);
     }
 
     @NonNull
@@ -52,6 +54,8 @@ public class ShoppingRecyclerViewAdapter extends RecyclerView.Adapter<ShoppingRe
                 int adapterPosition = holder.getAdapterPosition();
                 if (adapterPosition != RecyclerView.NO_POSITION) {
                     shoppingList.remove(adapterPosition);
+                    shoppingListInstance.setShoppingList(shoppingList);
+                    shoppingListInstance.saveToShoppingFile(context, shoppingList);
                     notifyItemRemoved(adapterPosition);
                     Toast.makeText(context, "Deleted Line", Toast.LENGTH_SHORT).show();
                 }
