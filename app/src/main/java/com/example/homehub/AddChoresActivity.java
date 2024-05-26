@@ -31,8 +31,8 @@ public class AddChoresActivity extends AppCompatDialogFragment implements Serial
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.floatinglayout_chores, null);
 
-        name = view.findViewById(R.id.atName);
-        description = view.findViewById(R.id.etDescription);
+        name = view.findViewById(R.id.floatingLayoutChEtName);
+        description = view.findViewById(R.id.floatingLayoutChEtDescription);
 
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {

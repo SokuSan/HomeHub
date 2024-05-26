@@ -10,7 +10,7 @@
     tools:layout_editor_absoluteY="-22dp">
 
     <ImageView
-        android:id="@+id/startImgLogo"
+        android:id="@+id/loginImgLogo"
         android:layout_width="331dp"
         android:layout_height="176dp"
         android:layout_marginStart="40dp"
@@ -21,7 +21,7 @@
         android:contentDescription="@string/todo" />
 
     <EditText
-        android:id="@+id/recoverEtEmail"
+        android:id="@+id/loginEtEmail"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="271dp"
         android:layout_height="48dp"
@@ -36,8 +36,8 @@
         android:inputType="textEmailAddress"
         android:textColor="#000000"
         android:textColorHint="#263238"
-        app:layout_constraintStart_toEndOf="@+id/recoverImgEmail"
-        app:layout_constraintTop_toBottomOf="@+id/startImgLogo" />
+        app:layout_constraintStart_toEndOf="@+id/loginImgEmail"
+        app:layout_constraintTop_toBottomOf="@+id/loginImgLogo" />
 
     <TextView
         android:id="@+id/loginEtForgotPwd"
@@ -50,21 +50,21 @@
         android:textColor="#000000"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerEtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEtPassword" />
 
     <ImageView
-        android:id="@+id/registerImgPwd"
+        android:id="@+id/loginImgPwd"
         android:layout_width="43dp"
         android:layout_height="42dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recoverImgEmail"
+        app:layout_constraintTop_toBottomOf="@+id/loginImgEmail"
         app:srcCompat="@drawable/password"
         android:contentDescription="@string/todo" />
 
     <EditText
-        android:id="@+id/registerEtPassword"
+        android:id="@+id/loginEtPassword"
         android:layout_width="271dp"
         android:layout_height="48dp"
         android:layout_marginStart="17dp"
@@ -76,18 +76,18 @@
         android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#263238"
-        app:layout_constraintStart_toEndOf="@+id/registerImgPwd"
-        app:layout_constraintTop_toBottomOf="@+id/recoverEtEmail" />
+        app:layout_constraintStart_toEndOf="@+id/loginImgPwd"
+        app:layout_constraintTop_toBottomOf="@+id/loginEtEmail" />
 
     <ImageView
-        android:id="@+id/recoverImgEmail"
+        android:id="@+id/loginImgEmail"
         android:layout_width="43dp"
         android:layout_height="44dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="63dp"
         android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/loginImgLogo"
         app:srcCompat="@drawable/usuario_removebg_preview" />
 
     <TextView
@@ -101,10 +101,10 @@
         android:textColor="#000000"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionsBtnLogOut" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtnLogOut" />
 
     <Button
-        android:id="@+id/optionsBtnLogOut"
+        android:id="@+id/loginBtnLogOut"
         android:layout_width="329dp"
         android:layout_height="91dp"
         android:layout_marginStart="40dp"

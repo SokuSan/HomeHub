@@ -10,7 +10,7 @@
     tools:layout_editor_absoluteY="-22dp">
 
     <ImageView
-        android:id="@+id/startImgLogo"
+        android:id="@+id/optionsImgLogo"
         android:layout_width="331dp"
         android:layout_height="176dp"
         android:layout_marginStart="40dp"
@@ -18,6 +18,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/homehub" />
+
+    <ImageView
+        android:id="@+id/optionsImgBack"
+        android:layout_width="139dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/goback"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/optionsBtnLogOut"
@@ -34,18 +45,6 @@
         android:textStyle="bold"
         app:iconTint="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/startImgLogo"
-        tools:ignore="VisualLintButtonSize" />
-
-    <ImageView
-        android:id="@+id/optionsImgBack"
-        android:layout_width="139dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="27dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/goback"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toBottomOf="@+id/optionsImgLogo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

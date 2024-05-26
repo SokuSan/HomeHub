@@ -21,7 +21,7 @@
             android:layout_height="127dp">
 
             <EditText
-                android:id="@+id/etName"
+                android:id="@+id/floatingLayoutShEtName"
                 android:layout_width="359dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="23dp"

@@ -30,7 +30,7 @@ public class AddShoppingActivity extends AppCompatDialogFragment implements Seri
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.floatinglayout_shopping, null);
 
-        name = view.findViewById(R.id.etName);
+        name = view.findViewById(R.id.floatingLayoutShEtName);
 
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {

@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/etNameExpenses"
+                android:id="@+id/floatingLayoutExEtNameExpenses"
                 android:layout_width="367dp"
                 android:layout_height="52dp"
                 android:layout_marginStart="16dp"
@@ -34,9 +34,9 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/etQuantityexpenses"
+                android:id="@+id/floatingLayoutExEtQuantityexpenses"
                 android:layout_width="367dp"
-                android:layout_height="46dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="26dp"
                 android:ems="10"
@@ -44,7 +44,7 @@
                 android:inputType="text"
                 android:textColor="#000000"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etNameExpenses" />
+                app:layout_constraintTop_toBottomOf="@+id/floatingLayoutExEtNameExpenses" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

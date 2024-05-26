@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,8 +20,8 @@ public class OptionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
-        logOut = findViewById(R.id.optionsBtnLogOut);
-        back = findViewById(R.id.optionsImgBack);
+        logOut = findViewById(R.id.registerBtnLogOut);
+        back = findViewById(R.id.registerImgBack);
 
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override

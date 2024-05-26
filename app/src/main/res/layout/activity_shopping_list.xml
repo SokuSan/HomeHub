@@ -49,9 +49,10 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="#42B8D4"
-        android:contentDescription="@string/add"
+        android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/shoppingTvTitle"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/shoppingImgBack"

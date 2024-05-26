@@ -32,8 +32,8 @@ public class AddExpensesActivity extends AppCompatDialogFragment implements Seri
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.floatinglayout_expenses, null);
 
-        name = view.findViewById(R.id.etNameExpenses);
-        quantity = view.findViewById(R.id.etQuantityexpenses);
+        name = view.findViewById(R.id.floatingLayoutExEtNameExpenses);
+        quantity = view.findViewById(R.id.floatingLayoutExEtQuantityexpenses);
 
         builder.setView(view)
                 .setPositiveButton("Create", (dialogInterface, i) -> {

@@ -26,8 +26,8 @@ public class RecoverPwdActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
 
         etEmail = findViewById(R.id.recoverEtEmail);
-        btnSend = findViewById(R.id.optionsBtnLogOut);
-        btnBack = findViewById(R.id.optionsImgBack);
+        btnSend = findViewById(R.id.recoverBtnLogOut);
+        btnBack = findViewById(R.id.recoverImgBack);
         mAuth = FirebaseAuth.getInstance();
 
         btnSend.setOnClickListener(v -> {

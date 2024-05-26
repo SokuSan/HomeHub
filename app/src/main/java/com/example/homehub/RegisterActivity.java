@@ -31,10 +31,10 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
 
         mAuth = FirebaseAuth.getInstance();
-        etEmail = findViewById(R.id.recoverEtEmail);
+        etEmail = findViewById(R.id.registerEtEmail);
         etPassword = findViewById(R.id.registerEtPassword);
-        btnRegister = findViewById(R.id.optionsBtnLogOut);
-        btnBack = findViewById(R.id.optionsImgBack);
+        btnRegister = findViewById(R.id.registerBtnLogOut);
+        btnBack = findViewById(R.id.registerImgBack);
         etRepeatPassword = findViewById(R.id.registerEtRepeatPassword);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
