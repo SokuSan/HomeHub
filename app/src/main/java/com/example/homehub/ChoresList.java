@@ -37,7 +37,6 @@ public class ChoresList implements Serializable {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.openFileInput(filename)));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                // Parsear cada línea como un gasto y agregarlo a la lista
                 String[] parts = line.split(",");
                 if (parts.length == 2) {
                     String name = parts[0];
@@ -50,7 +49,6 @@ public class ChoresList implements Serializable {
             e.printStackTrace();
         }
 
-        // Si la lista está vacía después de cargar desde el archivo, generar una nueva lista
         if (choresList.isEmpty()) {
             generateDefaultList(context);
         }

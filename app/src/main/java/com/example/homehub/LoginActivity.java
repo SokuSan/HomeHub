@@ -40,11 +40,11 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         rememberDevice = findViewById(R.id.loginCheckRememberDevice);
-        login = findViewById(R.id.registerBtnLogOut);
+        login = findViewById(R.id.loginBtnLogOut);
         register = findViewById(R.id.loginEtNotAMember);
         recover = findViewById(R.id.loginEtForgotPwd);
-        emailEditText = findViewById(R.id.registerEtEmail);
-        passwordEditText = findViewById(R.id.registerEtPassword);
+        emailEditText = findViewById(R.id.loginEtEmail);
+        passwordEditText = findViewById(R.id.loginEtPassword);
 
         SharedPreferences preferences = getSharedPreferences("userPrefs", Context.MODE_PRIVATE);
         boolean rememberMe = preferences.getBoolean("rememberMe", false);

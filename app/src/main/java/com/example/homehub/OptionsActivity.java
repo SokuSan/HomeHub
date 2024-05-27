@@ -20,8 +20,8 @@ public class OptionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
-        logOut = findViewById(R.id.registerBtnLogOut);
-        back = findViewById(R.id.registerImgBack);
+        logOut = findViewById(R.id.optionsBtnLogOut);
+        back = findViewById(R.id.optionsImgBack);
 
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
