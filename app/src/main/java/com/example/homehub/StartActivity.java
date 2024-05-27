@@ -68,7 +68,7 @@ public class StartActivity extends AppCompatActivity {
 
     }
     public void travelIntent(String page){
-        Intent intent = new Intent (StartActivity.this, StartActivity.class);;
+        Intent intent = new Intent (StartActivity.this, StartActivity.class);
         switch(page){
             case "chores" :
                 intent = new Intent (StartActivity.this, ChoresListActivity.class);
