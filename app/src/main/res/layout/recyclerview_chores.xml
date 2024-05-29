@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/recyclerVChTvName"
         android:layout_width="268dp"
-        android:layout_height="75dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginTop="34dp"
         android:fontFamily="monospace"
@@ -55,7 +55,7 @@
     <TextView
         android:id="@+id/recyclerVChTvDescription"
         android:layout_width="266dp"
-        android:layout_height="112dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
         android:text="@string/description"

@@ -28,8 +28,8 @@
 
     <TextView
         android:id="@+id/recyclerVShTvName"
-        android:layout_width="254dp"
-        android:layout_height="110dp"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="28dp"
         android:fontFamily="monospace"
@@ -44,8 +44,8 @@
         android:id="@+id/recyclerVShImgBin"
         android:layout_width="66dp"
         android:layout_height="56dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="TODO"
         app:layout_constraintStart_toEndOf="@+id/recyclerVShTvName"
         app:layout_constraintTop_toTopOf="parent"

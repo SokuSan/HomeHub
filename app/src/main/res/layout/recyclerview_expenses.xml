@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     android:background="#CCE0EE">
 
     <androidx.cardview.widget.CardView
@@ -32,8 +32,8 @@
 
     <TextView
         android:id="@+id/recyclerVExTvName"
-        android:layout_width="300dp"
-        android:layout_height="67dp"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="8dp"
         android:fontFamily="monospace"
@@ -47,7 +47,7 @@
     <TextView
         android:id="@+id/recyclerVExTvMoneyQuantity"
         android:layout_width="279dp"
-        android:layout_height="59dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
         android:layout_marginTop="9dp"
         android:fontFamily="monospace"
