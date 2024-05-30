@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ExpensesListActivity extends AppCompatActivity implements AddExpensesDialogInterface {
-    private Button add;
+    private FloatingActionButton add;
     private ImageView back;
     private Util util;
     private TextView total;
@@ -32,7 +32,7 @@ public class ExpensesListActivity extends AppCompatActivity implements AddExpens
         Intent intent = getIntent();
         util = new Util();
         back = findViewById(R.id.expensesBackbtn);
-        add = findViewById(R.id.expensesButtonAdd);
+        add = findViewById(R.id.expensesBtnAdd);
         total = findViewById(R.id.expensesTvQuantity);
         expensesList = util.initializeExpenses(getApplicationContext());
 

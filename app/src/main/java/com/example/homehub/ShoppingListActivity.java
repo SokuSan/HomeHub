@@ -13,8 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ShoppingListActivity extends AppCompatActivity implements AddShoppingDialogInterface{
-    private Button add;
+    private FloatingActionButton add;
     private Util util;
     private ImageView back;
     private ShoppingList shoppingList;
