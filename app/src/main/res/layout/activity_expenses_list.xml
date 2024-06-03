@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/expensesTvQuantity"
-        android:layout_width="124dp"
+        android:layout_width="wrap_content"
         android:layout_height="53dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="8dp"
@@ -73,10 +73,10 @@
 
     <TextView
         android:id="@+id/expensesTvMoney"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="25dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="monospace"
         android:text="@string/money"
         android:textColor="#000000"
