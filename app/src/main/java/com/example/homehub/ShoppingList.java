@@ -53,39 +53,9 @@ public class ShoppingList implements Serializable {
         }
 
         if (shoppingList.isEmpty()) {
-            generateDefaultList(context);
+            addShopping(new Shopping("Example"), context);
         }
     }
-
-    private void generateDefaultList(Context context) {
-        addShopping(new Shopping("Milk"), context);
-        addShopping(new Shopping("Bread"), context);
-        addShopping(new Shopping("Eggs"), context);
-        addShopping(new Shopping("Butter"), context);
-        addShopping(new Shopping("Cheese"), context);
-        addShopping(new Shopping("Chicken breast"), context);
-        addShopping(new Shopping("Ground beef"), context);
-        addShopping(new Shopping("Carrots"), context);
-        addShopping(new Shopping("Broccoli"), context);
-        addShopping(new Shopping("Apples"), context);
-        addShopping(new Shopping("Bananas"), context);
-        addShopping(new Shopping("Oranges"), context);
-        addShopping(new Shopping("Tomatoes"), context);
-        addShopping(new Shopping("Lettuce"), context);
-        addShopping(new Shopping("Potatoes"), context);
-        addShopping(new Shopping("Onions"), context);
-        addShopping(new Shopping("Garlic"), context);
-        addShopping(new Shopping("Rice"), context);
-        addShopping(new Shopping("Pasta"), context);
-        addShopping(new Shopping("Olive oil"), context);
-        addShopping(new Shopping("Salt"), context);
-        addShopping(new Shopping("Pepper"), context);
-        addShopping(new Shopping("Yogurt"), context);
-        addShopping(new Shopping("Orange juice"), context);
-        addShopping(new Shopping("Cereal"), context);
-    }
-
-
 
     public void saveToShoppingFile(Context context, List<Shopping> shoppingList) {
         try {

@@ -60,18 +60,17 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
             }
         });
 
-        holder.name.setOnLongClickListener(new View.OnLongClickListener() {
+        holder.btnDescription.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public void onClick(View view) {
                 if (holder.description.getVisibility() == View.VISIBLE){
                     holder.description.setVisibility(View.GONE);
                 } else {
                     holder.description.setVisibility(View.VISIBLE);
                 }
 
-                return true;
-            }
-        });
+        }
+    });
 
     }
 
@@ -84,12 +83,14 @@ public class ChoresRecyclerViewAdapter extends RecyclerView.Adapter<ChoresRecycl
         private TextView name;
         private TextView description;
         private ImageView bin;
+        private ImageView btnDescription;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.recyclerVChTvName);
             description = itemView.findViewById(R.id.recyclerVChTvDescription);
             bin = itemView.findViewById(R.id.recyclerVChImgBin);
+            btnDescription = itemView.findViewById(R.id.recyclerVChImgDescription);
         }
 
         }

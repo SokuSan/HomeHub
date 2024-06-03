@@ -51,7 +51,7 @@ public class ExpensesList implements Serializable {
         }
 
         if (expensesList.isEmpty()) {
-            generateList(context);
+            addExpenses(new Expenses("Example", 00.0), context);
         }
     }
 
@@ -66,33 +66,6 @@ public class ExpensesList implements Serializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private void generateList(Context context) {
-        addExpenses(new Expenses("Received 10€", 10.0), context);
-        addExpenses(new Expenses("Grocery shopping", -50.0), context);
-        addExpenses(new Expenses("Rent payment", -600.0), context);
-        addExpenses(new Expenses("Monthly salary", 2000.0), context);
-        addExpenses(new Expenses("Sold bicycle", 150.0), context);
-        addExpenses(new Expenses("Electricity bill", -75.0), context);
-        addExpenses(new Expenses("Birthday gift", 50.0), context);
-        addExpenses(new Expenses("Dinner at restaurant", -30.0), context);
-        addExpenses(new Expenses("Tax refund", 300.0), context);
-        addExpenses(new Expenses("Clothing purchase", -100.0), context);
-        addExpenses(new Expenses("Bank interest", 15.0), context);
-        addExpenses(new Expenses("Movie tickets", -20.0), context);
-        addExpenses(new Expenses("Sold used books", 25.0), context);
-        addExpenses(new Expenses("Water bill", -40.0), context);
-        addExpenses(new Expenses("Product return", 60.0), context);
-        addExpenses(new Expenses("School supplies", -25.0), context);
-        addExpenses(new Expenses("Property rental income", 500.0), context);
-        addExpenses(new Expenses("Medicine purchase", -15.0), context);
-        addExpenses(new Expenses("Anniversary gift", 100.0), context);
-        addExpenses(new Expenses("Gym membership", -45.0), context);
-        addExpenses(new Expenses("Performance bonus", 200.0), context);
-        addExpenses(new Expenses("Gasoline purchase", -60.0), context);
-        addExpenses(new Expenses("Car insurance payment", -200.0), context);
-        addExpenses(new Expenses("Sold old furniture", 80.0), context);
     }
 
     public String calculateTotalQuantity() {
